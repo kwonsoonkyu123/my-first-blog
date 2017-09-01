@@ -1,17 +1,19 @@
 <html>
     <head>
         <title>Django Girls blog</title>
+        <meta charset=utf-8>
     </head>
     <body>
         <div>
             <h1><a href="">Django Girls Blog</a></h1>
         </div>
 
+       <p>작동?</p>
         {% for post in posts %}
     		<div>
         		<p>published: {{ post.published_date }}</p>
         		<h1><a href="">{{ post.title }}</a></h1>
-        		<p>{{ post.text }}</p>
+        		<p>{{ post.text|linebreaksbr }}</p>
     		</div>
 		{% endfor %}
     </body>
